@@ -1,4 +1,4 @@
-let countries = []; 
+let countries = [];
 
 const fetchCountries = async () => {
     try {
@@ -8,7 +8,7 @@ const fetchCountries = async () => {
             return;
         }
         const data = await res.json();
-        countries = data; 
+        countries = data;
         displayCountries(countries);
     } catch (error) {
         console.log('Error fetching api', error)
@@ -18,7 +18,7 @@ const fetchCountries = async () => {
 // display countries as cards
 function displayCountries(countriesToDisplay) {
     const container = document.getElementById('country');
-    container.innerHTML = ""; 
+    container.innerHTML = "";
 
     for (const country of countriesToDisplay) {
         const card = document.createElement('div');
@@ -70,7 +70,7 @@ function showCountryDetails(country) {
     });
 
     // close modal on outside click
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
@@ -98,7 +98,7 @@ function searchedCountry() {
     );
 
     if (foundCountry) {
-        displayCountries([foundCountry]);  
+        displayCountries([foundCountry]);
     } else {
         document.getElementById('country').innerHTML = "<p>No country found</p>";
     }

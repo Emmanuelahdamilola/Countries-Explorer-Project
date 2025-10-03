@@ -17,7 +17,7 @@ body{
 .country-card {
     width: 220px;
     background-color: white;
-    height: 200px;
+    height: 250px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 1px 2px #cecece;
@@ -40,4 +40,13 @@ body{
 .country-card p {
     font-size: 16px;
     padding-top: 0;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1px solid #cecece;
+    box-shadow: 0px 1px 2px #cecece;
 }
