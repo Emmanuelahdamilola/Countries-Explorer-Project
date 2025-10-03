@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-.product-grid {
+.country-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 40px;
@@ -74,17 +74,6 @@ img {
 }
 
 
-@media (max-width: 768px) {
-  .d-flex {
-    flex-direction: column; 
-    align-items: stretch;   
-  }
-
-  .search-container {
-    width: 100%;
-  }
-}
-
 .modal {
     display: none;
     position: fixed;
@@ -118,6 +107,18 @@ img {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+    color: #cecece;
+}
+
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column; 
+    align-items: stretch;   
+  }
+
+  .search-container {
+    width: 100%;
+  }
 }
 
 
