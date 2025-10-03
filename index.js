@@ -15,7 +15,6 @@ const fetchCountries = async () => {
     }
 };
 
-// display countries as cards
 function displayCountries(countriesToDisplay) {
     const container = document.getElementById('country');
     container.innerHTML = "";
@@ -36,7 +35,6 @@ function displayCountries(countriesToDisplay) {
         flagImg.width = 60;
         population.textContent = `Population: ${country.population}`;
 
-        // Add click event to open modal
         card.addEventListener('click', () => showCountryDetails(country));
 
         card.append(flagImg, name, region, population);
@@ -44,7 +42,7 @@ function displayCountries(countriesToDisplay) {
     }
 }
 
-// show detailed info in modal
+
 function showCountryDetails(country) {
     const modal = document.getElementById('modal');
     const modalContent = document.querySelector('.modal-content');
@@ -60,16 +58,14 @@ function showCountryDetails(country) {
         <p><a href="${country.maps.googleMaps}" target="_blank">View on Google Maps</a></p>
     `;
 
-    // reopen modal after content reset
     modal.style.display = "block";
 
-    // close modal on X
     const closeBtn = modalContent.querySelector(".close");
     closeBtn.addEventListener('click', () => {
         modal.style.display = "none";
     });
 
-    // close modal on outside click
+
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -77,7 +73,7 @@ function showCountryDetails(country) {
     }
 }
 
-// filter by region
+
 function getCountry() {
     const inputText = document.getElementById('input').value.trim();
 
@@ -89,7 +85,7 @@ function getCountry() {
 }
 document.getElementById('getCountry').addEventListener('click', getCountry);
 
-// search by name
+
 function searchedCountry() {
     const inputText = document.getElementById('search').value.trim();
 
