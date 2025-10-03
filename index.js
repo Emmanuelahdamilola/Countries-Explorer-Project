@@ -1,5 +1,5 @@
 
-let countries = []; // make it global so both functions can access
+let countries = []; 
 
 const fetchCountries = async () => {
     try {
@@ -58,18 +58,23 @@ function getCountry() {
 document.getElementById('getCountry').addEventListener('click', getCountry);
 
 // function to search
-function searchCountry() {
-    const inputText = document.getElementById('input').value.trim();
+function searchedCountry() {
+    const inputText = document.getElementById('search').value.trim();
 
-    const searchCountry = countries.filter(country =>
-        country.region.toLowerCase() === inputText.toLowerCase()
+    const foundCountry = countries.find(country =>
+        country.name.common.toLowerCase() === inputText.toLowerCase()
     );
 
-    console.log(filterCountry);
-    displayCountries(filterCountry);
+    if (foundCountry) {
+        displayCountries([foundCountry]);  
+    } else {
+        document.getElementById('country').innerHTML = "<p>No country found</p>";
+    }
 }
 
-document.getElementById('getCountry').addEventListener('click', getCountry);
+
+
+document.getElementById('searchCountry').addEventListener('click', searchedCountry);
 
 
 fetchCountries();
