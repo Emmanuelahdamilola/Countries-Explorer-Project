@@ -11,34 +11,29 @@
 </head>
 
 <body>
-<button id="myBtn">Open Modal</button>
 
-<!-- The Modal -->
-<div id="modal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    
-  </div>
-
-</div>
     <div class="container mt-5">
-        <h2 class="text-uppercase text-center text-secondary display-4 fw-bold mb-3">countries Explorer</h2>
-        <p class="text-center fs-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, esse</p>
+        <h2 class="text-uppercase text-center text-secondary display-4 fw-bold mb-3">Countries Explorer</h2>
+        <p class="text-center fs-4">Search, filter, and explore country details.</p>
 
         <div class="d-flex w-full justify-content-evenly align-item-center gap-5">
             <div class="mb-3 md-flex search-container d-flex align-item-center gap-3">
-            <input type="text" class="form-control p-2" id="input" placeholder="Enter country name">
-            <button class="btn btn-success fs-6" id="getCountry">Get Country</button>
-        </div>
-         <div class="mb-3 md-flex search-container">
-            <input type="text" class="form-control" id="search" placeholder="Enter country name">
-            <button class="btn btn-success" id="searchCountry">Search</button>
-        </div>
+                <input type="text" class="form-control" id="input" placeholder="Filter by region (e.g. Africa)">
+                <button class="btn btn-success fs-6" id="getCountry">Filter Country</button>
+            </div>
+            <div class="mb-3 md-flex search-container d-flex align-item-center gap-3">
+                <input type="search" class="form-control" id="search" placeholder="Search country by name">
+                <button class="btn btn-success fs-6" id="searchCountry">Search Country</button>
+            </div>
         </div>
 
-         <div class="product-grid" id="country"></div>
+        <div id="modal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+            </div>
+        </div>
+        <div class="product-grid" id="country"></div>
 
 
 

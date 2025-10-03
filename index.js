@@ -1,3 +1,7 @@
+
+// Note: I used AI go to generate the country flags
+
+
 let countries = [];
 
 const fetchCountries = async () => {
@@ -53,7 +57,6 @@ function showCountryDetails(country) {
         <img src="${country.flags.png}" alt="${country.name.common} flag" width="120">
         <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : "N/A"}</p>
         <p><strong>Languages:</strong> ${country.languages ? Object.values(country.languages).join(", ") : "N/A"}</p>
-        
         <p><strong>Timezones:</strong> ${country.timezones ? country.timezones.join(", ") : "N/A"}</p>
         <p><a href="${country.maps.googleMaps}" target="_blank">View on Google Maps</a></p>
     `;
